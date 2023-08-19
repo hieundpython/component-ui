@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { FileAttachmentTree } from "./attachment-tree";
+import { data } from "./attachment-tree/data";
 
 function App() {
+  // const [value, setValue] = useState<any>(null)
+  // return <PickDateTime value={value} onChange={(value) => setValue(value)}/>;
+
+  const [folders, setFolders] = useState(data);
+  const [uploadFiles, setUploadFiles] = useState<any[]>([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h3>Đính kèm hồ sơ</h3>
+      <FileAttachmentTree
+        folders={folders}
+        onChangeFolders={setFolders}
+        uploadFiles={uploadFiles}
+        onChangeUploadFiles={setUploadFiles}
+      />
     </div>
   );
 }

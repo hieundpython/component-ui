@@ -1,0 +1,84 @@
+/* styles/MonthSchedule.css */
+
+.month-schedule {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    overflow: auto;
+}
+
+.month-schedule th,
+.month-schedule td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    min-width: 100px;
+    /* Đặt kích thước cho cột là 200px */
+}
+
+.month-schedule th {
+    background-color: #f2f2f2;
+}
+
+.month-schedule td div {
+    padding: 4px;
+}
+
+/* Kiểu cho cột đầu tiên */
+.month-schedule th:first-child,
+.month-schedule td:first-child {
+    background-color: #d1e0e0;
+    font-weight: bold;
+}
+
+.time-column {
+    position: sticky;
+    left: 0;
+    background-color: white;
+    z-index: 2000
+}
+
+/* styles/Modal.css */
+
+.modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    /* Đặt độ rộng tối đa cho modal */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.action-button {
+    position: sticky;
+    left: 0;
+    background-color: white;
+    z-index: 2000;
+    /* Đặt z-index để nút không bị che phủ bởi nội dung khác */
+    margin-bottom: 5px;
+}
