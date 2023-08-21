@@ -1,0 +1,29 @@
+/* EmployeeTable.css */
+.employee-table-wrapper {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+  
+  .employee-table {
+    display: grid;
+    grid-template-columns: repeat(4, auto) repeat(2, 2em); /* 4 sticky columns followed by day columns */
+    grid-auto-columns: 2em;
+    grid-auto-flow: column;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    width: auto;
+  }
+  
+  .employee-table th,
+  .employee-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .employee-table th:nth-child(-n + 4) {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background-color: #f2f2f2;
+  }

@@ -17,7 +17,7 @@ const SimpleComponent = () => {
     setIsModalVisible(false);
   };
 
-  const handleNameChange = e => {
+  const handleNameChange = (e: any) => {
     setName(e.target.value);
   };
 
