@@ -3,9 +3,16 @@ import { FileAttachmentTree } from "./attachment-tree";
 import { data } from "./attachment-tree/data";
 import { PickDateTime } from "./pick-date-time";
 import EmployeeTable from "./table/Table";
+import Header from "./header/header";
 
 function App() {
-  return <EmployeeTable />;
+  return (
+    <div style={{ width: 700}}>
+      <Header />
+    </div>
+  );
+
+  // return <EmployeeTable />;
   // const [value, setValue] = useState<any>(null)
   // return <PickDateTime value={value} onChange={(value) => setValue(value)}/>;
 
